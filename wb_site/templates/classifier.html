@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Classifier</h2>
+    <form method="POST">
+        {% if not plot %}
+        {% csrf_token %}
+        <div class="pb-2">Choose a chromosome by selecting a number:</div>
+        {{ form.chromosome_num|as_crispy_field }}
+        <button type="submit" name="button1"
+                class="btn btn-outline-primary m-2">Download
+        </button>
+
+        {% else %}
+        {% csrf_token %}
+        {{ form2.chromosome_num|as_crispy_field }}
+        {{ form2.percentage|as_crispy_field }}
+        {{ form2.min_index|as_crispy_field }}
+        <button type="submit" name="button2" class="btn btn-outline-primary m-2">Submit</button>
+        <a role="button" href="{% url 'classifier' action='pass' %}"
+           class="btn btn-outline-secondary m-2">Back to download</a>
+        {% endif %}
+        <a role="button" href="{% url 'classifier' action='plot' %}" class="btn btn-outline-secondary m-2">Plot
+            results</a>
+    </form>
+</div>
+<div class="plot">
+    {% autoescape off %}
+        {{ plot_div }}
+    {% endautoescape %}
+</div>
+{% endblock %}

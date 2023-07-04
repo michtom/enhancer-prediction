@@ -1,0 +1,44 @@
+
+.container {
+    width: 80%;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+}
+
+h4 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+    font-size: x-large;
+}
+
+footer {
+    margin-top: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.container .plot {
+    margin-right: 5em;
+}

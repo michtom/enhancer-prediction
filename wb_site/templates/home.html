@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Home</h1>
+
+    <h2>Solution description</h2>
+    <div class="home_desc">
+        <div class="pt-5">
+            <h3>Data sources:</h3>
+            <ul>
+                <li> <a href="http://www.enhanceratlas.org">GM12878 cell line data</a> (positive set)</li>
+                <li> negative_set.bed from Moodle (negative set)</li>
+                <li><a href="https://www.gencodegenes.org/human/release_43lift37.html">GRCh37 genom data</a> (random
+                    sequences for testing)
+                </li>
+            </ul>
+        </div>
+
+        <div class="pt-5">
+            <h3>Preprocessing</h3>
+            <ol>
+                <li> Clean the data - remove rows for specific chromosomes</li>
+                <li> Calculate the frequency of each k-mer</li>
+                <li> Cut out the enhancer and non-enhancer DNA code parts from GRCh37 data</li>
+                <li> Contruct the final datasets</li>
+            </ol>
+        </div>
+        <div class="pt-5">
+            <h3>Classifier Model</h3>
+            <h3>Initially, XGBoostClassifier was chosen as the final classifier</h3>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
