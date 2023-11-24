@@ -9,5 +9,5 @@ Authors:
 * Filip Szympliński
 * Michał Tomczyk
 
-# Get the data
-Fill folder wb_2023/wb_site/static/4_mers/ with files named like "4_mers_chr16.csv", to download zip visit: https://drive.google.com/drive/folders/1xTG9NMLiQNMETCdwUvtM6oJZ71c7mMuh
+Functions in `data_preparing.py`, `preparing_dna_kmers.py`,  `preparing_dna_seq.py` and `preprocessing_functions.py` were run on raw .bed and .fa files. Preprocessed data, divided into .csv files for each chromosome can be downloaded from https://drive.google.com/drive/folders/1xTG9NMLiQNMETCdwUvtM6oJZ71c7mMuh. To make the website run properly, fill enhancer-prediction/wb_site/static/4_mers/ folder with this unpacked files.
+
